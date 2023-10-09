@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#1e1b1b" />
+            <corners android:topLeftRadius="60dp" android:topRightRadius="60dp" /> <!-- Raio nos cantos superiores -->
+        </shape>
+    </item>
+</layer-list>

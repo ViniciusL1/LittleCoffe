@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LittleCoffe 2.0</string>
+    <string name="page_title">Home</string>
+    <string name="Carrinho">Carrinho</string>
+    <string name="Compras_cliente">Compras_cliente</string>
+    <string name="Coffe_Beans">Coffe Beans</string>
+    <string name="Classic_Coffe">Classic Coffe</string>
+    <string name="Desserts">Desserts</string>
+    <string name="Signature_Coffe">Signature</string>
+    <string name="home">Home</string>
+    <string name="Search">Search</string>
+    <string name="Favorites">Favorites</string>
+</resources>
