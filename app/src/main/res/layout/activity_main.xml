@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#272425"
-    >
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#272425">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -64,7 +63,9 @@
 
         </com.google.android.material.tabs.TabLayout>
 
+
     </androidx.core.widget.NestedScrollView>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -72,7 +73,42 @@
         android:layout_gravity="bottom"
         android:background="@drawable/custom_card_background"/>
 
-    <RelativeLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Search"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Favorites"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,7 +119,6 @@
             android:id="@+id/fab1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_gravity="bottom"
             android:layout_marginStart="65dp"
             android:layout_marginTop="16dp"
@@ -91,30 +126,29 @@
             android:layout_marginBottom="16dp"
             android:backgroundTint="#423939"
             app:fabSize="mini"
-            android:tint="@color/white"
+            app:tint="@color/white"
             android:src="@drawable/home"
             android:contentDescription="@string/home" />
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="45dp"
-            android:layout_marginBottom="10dp"
-            android:layout_toStartOf="@id/fab3"
-            android:layout_toEndOf="@id/fab1"
-            android:src="@drawable/ic_search"
+            android:layout_marginBottom="20dp"
             android:backgroundTint="#423939"
+            app:tint="@color/white"
+            android:src="@drawable/ic_search"
             android:contentDescription="@string/Search" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_gravity="bottom"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
@@ -122,11 +156,49 @@
             android:layout_marginBottom="16dp"
             app:fabSize="mini"
             android:src="@drawable/ic_favorites"
+            app:tint="@color/white"
             android:backgroundTint="#423939"
             android:contentDescription="@string/Favorites" />
 
-    </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bestChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/nestedScrollView"
+        android:layout_marginTop="120dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Best_Choice"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:textSize="30sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/See_more"
+            android:textColor="#b97a67"
+            android:textSize="17sp"
+            android:layout_marginStart="130dp"/>
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/bestChoice"
+        tools:listitem="@layout/best_choices_list"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="180dp"/>
 
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+

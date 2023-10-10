@@ -1,13 +1,9 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<resources>
     <style name="Base.Theme.LittleCoffe20" parent="Theme.Material3.DayNight.NoActionBar">
 
         <item name="colorPrimary">#272425</item>
-
-
+        <item name="color">#ffffff</item>
 
     </style>
-
-
     <style name="Theme.LittleCoffe20" parent="Base.Theme.LittleCoffe20" />
 </resources>
