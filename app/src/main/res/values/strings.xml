@@ -17,4 +17,9 @@
     <string name="Product_Image">Product_Image</string>
     <string name="Best_Choice">Best Choice</string>
     <string name="See_more">See all</string>
+    <string name="Offers">Offers</string>
+    <string name="produto_offer">Produto_Offer</string>
+    <string name="normal_price">20 USD</string>
+    <string name="offer_price">12 USD</string>
+    <string name="product_offer_img">Product_Offer_img</string>
 </resources>
